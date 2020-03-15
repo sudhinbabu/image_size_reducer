@@ -1,6 +1,7 @@
 #!/bin/bash
 
-quality=${2:-75};
+quality=${3:-75};
+extension=${2:-JPG};
 if [[ -d "$1" ]] 
 then
     prefix=${1%/}
@@ -12,7 +13,7 @@ fi
 
 
 mkdir -p $prefix"/converted";
-for f in $prefix/*.JPG ; do 
+for f in $prefix/*.$extension ; do 
     filename=${f##*/}
     echo "convert $f -quality $quality $prefix/converted/$filename" ; 
     convert $f -quality $quality $prefix/converted/$filename; 
