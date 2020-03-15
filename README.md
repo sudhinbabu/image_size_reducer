@@ -1,4 +1,4 @@
-# bulk image_size_reducer
+# bulk image size reducer
 reduce image size without loosing quality
 
 install imagemagick and run
