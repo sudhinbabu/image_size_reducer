@@ -13,7 +13,7 @@ fi
 
 mkdir -p $prefix"/converted";
 for f in $prefix/*.JPG ; do 
-    # convert $f -quality 75 $prefix/converted/$f ; 
     filename=${f##*/}
     echo "convert $f -quality $quality $prefix/converted/$filename" ; 
+    convert $f -quality $quality $prefix/converted/$filename; 
 done
